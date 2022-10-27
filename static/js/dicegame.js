@@ -86,8 +86,6 @@ function run() {
     }
   }
 
-  // loading.classList.toggle("ds-flex");
-
   // 스크롤 자동 이동
   var location = document.querySelector(".result").offsetTop;
   window.scrollTo({ top: location, behavior: "smooth" });
@@ -152,18 +150,11 @@ function run() {
 
   // 로딩창 구현
   if (loading.classList.contains("ds-flex") == false) {
-    // const target = document.getElementById("target_btn");
     loading.classList.add("ds-flex");
-    // target.disabled = true;
     loading.classList.remove("ds-none");
     pop();
     window.setTimeout(render, "2000");
-    // target.disabled = false;
   }
-  // pop();
-  // render();
-  // window.setTimeout(render, "2000");
-
   // LOSER text 노출
 
   document.querySelector(
