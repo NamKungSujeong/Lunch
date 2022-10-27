@@ -21,89 +21,108 @@
     <link rel="icon" type="image/png" href="/static/image/favicon.png" />
   </head>
 
-  <body>
-    <!-- 메뉴 -->
-    <nav class="menu-list">
-      <div href="#" class="icon"><i class="bi bi-list"></i>MENU</div>
-      <div class="ul-list">
-        <a class="ls" href="/">
-          <img class="menu-icon home" src="/static/image/logo.png" />
-          <p class="p-none">HOME</p>
-        </a>
-        <a class="ls dropdown-btn">
-          <img class="menu-icon" src="/static/image/game.png" />
-          <p class="p-none">복불복 게임</p>
-          <div class="dropdown-container">
-            <a class="game" href="dicegame">주사위 게임</a>
-            <a class="game" href="scratch">보물 찾기</a>
-            <a class="game" href="game2">카드 뽑기</a>
-          </div>
-        </a>
-      </div>
-    </nav>
-
-    <!-- 토글 메뉴 -->
-    <nav class="toggle-menu d-none">
-      <div class="toggle-menu-list">
-        <a class="toggle-ls" href="/">HOME</a>
-        <a class="toggle-ls toggle-dropdown-btn">
-          복불복 게임
-          <!-- <i class="fa fa-caret-down"></i> -->
-        </a>
-        <div class="toggle-container">
-          <a class="t-game" href="dicegame">주사위 게임</a>
-          <a class="t-game" href="scratch">보물 찾기</a>
-          <a class="t-game" href="game2">카드 뽑기</a>
+<body>
+  <!-- 메뉴 -->
+  <nav class="menu-list">
+    <div href="#" class="icon"><i class="bi bi-list"></i>MENU</div>
+    <div class="ul-list">
+      <a class="ls" href="/">
+        <img class="menu-icon home" src="/static/image/logo.png" />
+        <p class="p-none">HOME</p>
+      </a>
+      <a class="ls dropdown-btn">
+        <img class="menu-icon" src="/static/image/game.png" />
+        <p class="p-none">복불복 게임</p>
+        <div class="dropdown-container">
+          <a class="game" href="dicegame">주사위 게임</a>
+          <a class="game" href="scratch">보물 찾기</a>
+          <a class="game" href="game2">카드 뽑기</a>
         </div>
-      </div>
-    </nav>
-
-    <div class="title title-none">
-      <!-- <img class="map2" src="/static/image/map2.png" /> -->
-      <h1>보물 찾기<img src="/static/image/glass.png" /></h1>
-
-      <p class="start">Game Start >></p>
+      </a>
     </div>
-    <div id="scratchContainer">
-      <div class="tip">
-        <p>
-          <span class="tip">Tip1.</span> "섞기" 버튼을 클릭해 당첨 카드를 생성해
-          주세요
-        </p>
-        <p><span class="tip">Tip2.</span> 카드를 긁어 당첨자를 찾아주세요!</p>
-      </div>
-      <div class="canvas">
-        <canvas id="scratch1" width="500" height="300"></canvas>
-      </div>
-      <div class="canvas">
-        <canvas id="scratch2" width="500" height="300"></canvas>
-      </div>
-      <div class="canvas noshow">
-        <canvas id="scratch3" width="500" height="300"></canvas>
-      </div>
-      <div class="canvas noshow">
-        <canvas id="scratch4" width="500" height="300"></canvas>
-      </div>
-      <div class="canvas noshow">
-        <canvas id="scratch5" width="500" height="300"></canvas>
-      </div>
-      <div class="canvas noshow">
-        <canvas id="scratch6" width="500" height="300"></canvas>
-      </div>
-    </div>
-    <div class="but">
-      <button class="add" type="button" onclick="add();">유저 추가</button>
-      <button class="remove" type="button" onclick="remove();">
-        유저 삭제
-      </button>
-      <button type="button" onclick="run();">섞기</button>
-      <button class="result" type="button" onclick="result();">
-        결과 한번에 보기
-      </button>
-      <button type="button"><a href="scratch">다시 하기</a></button>
-    </div>
+  </nav>
 
-    <script src="/static/js/scratch.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  </body>
+  <!-- 토글 메뉴 -->
+  <nav class="toggle-menu d-none">
+    <div class="toggle-menu-list">
+      <a class="toggle-ls" href="/">HOME</a>
+      <a class="toggle-ls toggle-dropdown-btn">
+        복불복 게임
+
+      </a>
+      <div class="toggle-container">
+        <a class="t-game" href="dicegame">주사위 게임</a>
+        <a class="t-game" href="scratch">보물 찾기</a>
+        <a class="t-game" href="game2">카드 뽑기</a>
+        >>>>>>> 581b2d5610ed98c36ace347195846c76735c831d
+      </div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- 토글 메뉴 -->
+  <nav class="toggle-menu d-none">
+    <div class="toggle-menu-list">
+      <a class="toggle-ls" href="/">HOME</a>
+      <a class="toggle-ls toggle-dropdown-btn">
+        복불복 게임
+        <!-- <i class="fa fa-caret-down"></i> -->
+      </a>
+      <div class="toggle-container">
+        <a class="t-game" href="dicegame">주사위 게임</a>
+        <a class="t-game" href="scratch">보물 찾기</a>
+        <a class="t-game" href="game2">카드 뽑기</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="title title-none">
+
+    <h1>보물 찾기<img src="/static/image/glass.png" /></h1>
+
+    <p class="start">Game Start >></p>
+  </div>
+  <div id="scratchContainer">
+    <div class="tip">
+      <p>
+        <span class="tip">Tip1.</span> "섞기" 버튼을 클릭해 당첨 카드를 생성해
+        주세요
+      </p>
+      <p><span class="tip">Tip2.</span> 카드를 긁어 당첨자를 찾아주세요!</p>
+    </div>
+    <div class="canvas">
+      <canvas id="scratch1" width="500" height="300"></canvas>
+    </div>
+    <div class="canvas">
+      <canvas id="scratch2" width="500" height="300"></canvas>
+    </div>
+    <div class="canvas noshow">
+      <canvas id="scratch3" width="500" height="300"></canvas>
+    </div>
+    <div class="canvas noshow">
+      <canvas id="scratch4" width="500" height="300"></canvas>
+    </div>
+    <div class="canvas noshow">
+      <canvas id="scratch5" width="500" height="300"></canvas>
+    </div>
+    <div class="canvas noshow">
+      <canvas id="scratch6" width="500" height="300"></canvas>
+    </div>
+  </div>
+  <div class="but">
+    <button class="add" type="button" onclick="add();">유저 추가</button>
+    <button class="remove" type="button" onclick="remove();">
+      유저 삭제
+    </button>
+    <button type="button" onclick="run();">섞기</button>
+    <button class="result" type="button" onclick="result();">
+      결과 한번에 보기
+    </button>
+    <button type="button"><a href="scratch">다시 하기</a></button>
+  </div>
+
+  <script src="/static/js/scratch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+
 </html>
