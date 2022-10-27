@@ -150,7 +150,6 @@ for (let i = 0; i < 6; i++) {
   }
   //지우개
   function drawDot(i, mouseX, mouseY) {
-    // console.log(mouseX, mouseY);
     scratchCanvasArr[i].beginPath();
     scratchCanvasArr[i].arc(mouseX, mouseY, brushRadius, 0, 2 * Math.PI, true);
     scratchCanvasArr[i].fillStyle = "#000";
