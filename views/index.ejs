@@ -1,41 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- font -->
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-    />
-    <!-- Bootstrap Icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <!-- Normalize.css -->
-    <link rel="stylesheet" href="/static/css/normalize.css" />
+<html lang="ko">
 
-    <link rel="stylesheet" href="/static/css/index.css" />
-    <link rel="stylesheet" href="/static/css/random.css" />
-    <link rel="stylesheet" href="/static/css/cash.css" />
-    <link rel="stylesheet" href="/static/css/detail_page.css" />
 
-    <!-- CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main page</title>
+  <meta name="description" content="메인 페이지">
+  <link rel="icon" type="image/png" href="https://example.com/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- font -->
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Normalize.css -->
+  <link rel="stylesheet" href="/static/css/normalize.css" />
 
+  <link rel="stylesheet" href="/static/css/index.css" />
+  <link rel="stylesheet" href="/static/css/random.css" />
+  <link rel="stylesheet" href="/static/css/cash.css" />
+  <link rel="stylesheet" href="/static/css/detail_page.css" />
+
+  <!-- CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
   <body>
     <div class="main-container">
       <nav class="menu-list">
@@ -72,16 +63,33 @@
             <a class="t-game" href="dicegame">주사위 게임</a>
             <a class="t-game" href="scratch">보물 찾기</a>
             <a class="t-game" href="game2">카드 뽑기</a>
-          </div>
-          <a class="toggle-ls popup">계산기</a>
-          <a class="toggle-ls" href="map">맛집 지도</a>
-        </div>
-      </nav>
 
-      <div class="main">
-        <div class="title-logo">
-          <img class="logo" src="/static/image/title-logo.png" alt="점메추" />
+          </div>
+        </a>
+        <a class="ls hover popup">
+          <img class="menu-icon" src="/static/image/calculator.png" />
+          <p class="p-none">계산기</p>
+        </a>
+        <a class="ls hover" href="map">
+          <img class="menu-icon" src="/static/image/map.png" />
+          <p class="p-none">맛집 지도</p>
+        </a>
+      </div>
+    </nav>
+
+    <!-- 토글 메뉴 -->
+    <nav class="toggle-menu d-none">
+      <div class="toggle-menu-list">
+        <a class="toggle-ls toggle-dropdown-btn">
+          정산 게임
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <div class="toggle-container">
+          <a class="t-game" href="dicegame">주사위 게임</a>
+          <a class="t-game" href="scratch">보물 찾기</a>
+          <a class="t-game" href="game2">카드 뽑기</a>
         </div>
+        
         <form>
           <input
             id="search-item"
@@ -284,36 +292,30 @@
               </a>
             </div>
 
-            <div class="card">
-              <a href="detail_page7">
-                <img
-                  src="/static/image/이삭토스트.jpg"
-                  width="100%"
-                  height="300px"
-                  class="card-img-top"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h5 class="card-title">이삭토스트</h5>
-                  <p class="card-text">
-                    토스트 체인점으로 빠르고 푸짐한 간편식사가 가능한
-                    토스트집(이삭토스트)
-                  </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    별점
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </li>
-                  <li class="list-group-item">거리: 271m</li>
-                  <li class="list-group-item">평균 가격: 3,700</li>
-                </ul>
-              </a>
-            </div>
+          <div class="card">
+            <a href="detail_page7">
+              <img src="/static/image/이삭토스트.jpg" width="100%" height="300px" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">이삭토스트</h5>
+                <p class="card-text">
+                  토스트 체인점으로 빠르고 푸짐한 간편식사가 가능한
+                  토스트집(이삭토스트)
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  별점
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </li>
+                <li class="list-group-item">거리: 271m</li>
+                <li class="list-group-item">평균 가격: 3,700</li>
+              </ul>
+            </a>
+          </div>
 
             <div class="card">
               <a href="detail_page9">
@@ -707,98 +709,80 @@
               </a>
             </div>
 
-            <div class="card">
-              <a href="detail_page21">
-                <img
-                  src="/static/image/희희.jpg"
-                  width="100%"
-                  height="300px"
-                  class="card-img-top"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h5 class="card-title">희희</h5>
-                  <p class="card-text">
-                    고등 어온소바가 유명하고 맛있는 곳(희희)
-                  </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    별점
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </li>
-                  <li class="list-group-item">거리: 387m</li>
-                  <li class="list-group-item">평균 가격: 15,000</li>
-                </ul>
-              </a>
-            </div>
+          <div class="card">
+            <a href="detail_page21">
+              <img src="/static/image/희희.jpg" width="100%" height="300px" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">희희</h5>
+                <p class="card-text">
+                  고등 어온소바가 유명하고 맛있는 곳(희희)
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  별점
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </li>
+                <li class="list-group-item">거리: 387m</li>
+                <li class="list-group-item">평균 가격: 15,000</li>
+              </ul>
+            </a>
+          </div>
 
-            <div class="card">
-              <a href="detail_page22">
-                <img
-                  src="/static/image/부부.jpg"
-                  width="100%"
-                  height="300px"
-                  class="card-img-top"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h5 class="card-title">부부요리단</h5>
-                  <p class="card-text">
-                    감미료 맛이 잘 안나며 볶음을 대표로 하는 한식집(부부요리단)
-                  </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    별점
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </li>
-                  <li class="list-group-item">거리: 503m</li>
-                  <li class="list-group-item">평균 가격: 9,000</li>
-                </ul>
-              </a>
-            </div>
+          <div class="card">
+            <a href="detail_page22">
+              <img src="/static/image/부부.jpg" width="100%" height="300px" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">부부요리단</h5>
+                <p class="card-text">
+                  감미료 맛이 잘 안나며 볶음을 대표로 하는 한식집(부부요리단)
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  별점
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </li>
+                <li class="list-group-item">거리: 503m</li>
+                <li class="list-group-item">평균 가격: 9,000</li>
+              </ul>
+            </a>
+          </div>
 
-            <div class="card">
-              <a href="detail_page">
-                <img
-                  src="/static/image/운주당.jpg"
-                  width="100%"
-                  height="300px"
-                  class="card-img-top"
-                  alt=""
-                />
-                <div class="card-body">
-                  <h5 class="card-title">운주당</h5>
-                  <p class="card-text">
-                    100년된 한옥을 리모델링한 손만두 및 전으로 유명한
-                    음식점(운주당)
-                  </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    별점
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </li>
-                  <li class="list-group-item">거리: 716m</li>
-                  <li class="list-group-item">평균 가격: 9,000</li>
-                </ul>
-              </a>
-            </div>
+          <div class="card">
+            <a href="detail_page">
+              <img src="/static/image/운주당.jpg" width="100%" height="300px" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">운주당</h5>
+                <p class="card-text">
+                  100년된 한옥을 리모델링한 손만두 및 전으로 유명한
+                  음식점(운주당)
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  별점
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </li>
+                <li class="list-group-item">거리: 716m</li>
+                <li class="list-group-item">평균 가격: 9,000</li>
+              </ul>
+            </a>
           </div>
         </div>
+      </div>
 
         <div class="random" style="display: flex">
           <div class="receipt">
@@ -836,75 +820,75 @@
               <p class="click">
                 click<img class="click-logo" src="/static/image/click.png" />
               </p>
+
             </div>
+            <p class="click">
+              click<img class="click-logo" src="/static/image/click.png" />
+            </p>
           </div>
         </div>
+      </div>
 
-        <div class="modal modal-overlay" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-area">X</div>
-              <div class="modal-body">
-                <div class="cash-main-container">
-                  <!-- 메뉴 입력창 부분 -->
-                  <form id="menuForm">
-                    <h1 class="cash-title">우리 정산 해요</h1>
-                    <div class="wrapper">
-                      <p class="first">주문 입력</p>
-                      <label>메뉴</label>
-                      <input id="menu" type="text" />
+      <div class="modal modal-overlay" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close-area">X</div>
+            <div class="modal-body">
+              <div class="cash-main-container">
+                <!-- 메뉴 입력창 부분 -->
+                <form id="menuForm">
+                  <h1 class="cash-title">우리 정산 해요</h1>
+                  <div class="wrapper">
+                    <p class="first">주문 입력</p>
+                    <label>메뉴</label>
+                    <input id="menu" type="text" />
 
-                      <label>가격</label>
-                      <input id="price" type="text" />
-                      <button id="submitButton" type="submit">+</button>
-                    </div>
-                  </form>
-                  <!-- 입력 결과 창 부분 -->
-                  <div class="order-list">
-                    <p class="second">주문 리스트</p>
-                    <ol class="lists"></ol>
+                    <label>가격</label>
+                    <input id="price" type="text" />
+                    <button id="submitButton" type="submit">+</button>
                   </div>
-                  <!-- 총합 부분 -->
-                  <div class="cal">
-                    <p id="total"></p>
-                    <label class="peo" for="peo"> / 총 인원수 : </label>
-                    <input
-                      id="people"
-                      type="number"
-                      value="1"
-                      onchange="autopay()"
-                    />
-                  </div>
-                  <div class="result">
-                    <p class="payment">= 인당 <span id="payment"></span></p>
-                  </div>
+                </form>
+                <!-- 입력 결과 창 부분 -->
+                <div class="order-list">
+                  <p class="second">주문 리스트</p>
+                  <ol class="lists"></ol>
+                </div>
+                <!-- 총합 부분 -->
+                <div class="cal">
+                  <p id="total"></p>
+                  <label class="peo" for="peo"> / 총 인원수 : </label>
+                  <input id="people" type="number" value="1" onchange="autopay()" />
+                </div>
+                <div class="result">
+                  <p class="payment">= 인당 <span id="payment"></span></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              <li class="nav-item">
-                <a href="/" class="nav-link px-2 text-muted">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-muted popup">계산기</a>
-              </li>
-              <li class="nav-item">
-                <a href="map" class="nav-link px-2 text-muted">맛집 지도</a>
-              </li>
-            </ul>
-            <p class="text text-center text-muted">© 2022 Team G, Inc</p>
-          </footer>
-        </div>
+      </div>
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a href="/" class="nav-link px-2 text-muted">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 text-muted popup">계산기</a>
+            </li>
+            <li class="nav-item">
+              <a href="map" class="nav-link px-2 text-muted">맛집 지도</a>
+            </li>
+          </ul>
+          <p class="text text-center text-muted">© 2022 Team G, Inc</p>
+        </footer>
       </div>
     </div>
-
+    
     <script src="/static/js/random.js"></script>
     <script src="/static/js/index.js"></script>
     <script src="/static/js/cash.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
