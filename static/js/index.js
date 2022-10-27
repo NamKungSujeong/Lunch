@@ -52,10 +52,6 @@ for (let i = 0; i < btnModal.length; i++) {
 const closeBtn = modal.querySelector(".close-area");
 closeBtn.addEventListener("click", (e) => {
   modal.style.display = "none";
-  // document.querySelector("#total").innerText = " ";
-  // document.querySelector("#payment").innerText = " ";
-  // document.querySelector("ul").remove();
-  // document.querySelector(".lists").innerHTML = " ";
   tot = 0;
   pay = 0;
 
@@ -118,11 +114,3 @@ function search() {
     }
   }
 }
-
-//엔터키 기능
-// document.getElementById("search-item").addEventListener("keypress",function(e){
-//   e.preventDefault();
-//   if(e.key === '13'){
-//     document.getElementById("submit").click();
-//   }
-// });
