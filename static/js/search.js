@@ -15,8 +15,6 @@ const search = () => {
       } else {
         product[i].style.display = "none";
       }
-    } else {
-      storeitems.innerText = "찾으시는 검색 결과가 없습니다.";
     }
   }
 };
