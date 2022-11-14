@@ -121,12 +121,12 @@ ol {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 400px;
+  /* height: 400px; */
 }
 
 .receipt {
   width: 300px;
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

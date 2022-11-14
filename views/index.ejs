@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
+    <title>HOME</title>
     <meta name="description" content="메인 페이지" />
     <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
     <link
@@ -72,7 +72,7 @@
       <!-- 토글 메뉴 -->
       <nav class="toggle-menu d-none">
         <div class="toggle-menu-list">
-          <a class="toggle-ls toggle-dropdown-btn"> 정산 게임 </a>
+          <a class="toggle-ls toggle-dropdown-btn"> 복불복 게임 </a>
           <div class="toggle-container">
             <a class="t-game" href="dicegame">주사위 게임</a>
             <a class="t-game" href="scratch">보물 찾기</a>
@@ -94,8 +94,8 @@
             class="search"
             type="text"
             name=""
-            placeholder="찾고 싶은 메뉴를 입력해 주세요"
-            aria-label="찾고 싶은 메뉴를 입력해 주세요"
+            placeholder="랜덤 박스를 클릭해 주세요"
+            aria-label="랜덤 박스를 클릭해 주세요"
             aria-describedby="button-addon2"
             onkeypress="if(event.keyCode =='13'){event.preventDefault(); search(); changeStyle();}"
           />
@@ -103,6 +103,11 @@
             <img src="/static/image/search.png" />
           </button>
         </form>
+        <p class="useIt">
+          <span>how to use it?</span><br />아래의 랜덤 박스를 클릭 후 검색
+          버튼을 눌러주세요<br />관련된 음식점을 추천해 드립니다.
+        </p>
+
         <div id="myDiv" style="display: none">
           <div class="product-list" id="product-list">
             <div class="card">
@@ -808,11 +813,17 @@
 
         <div class="random" style="display: flex">
           <div class="receipt">
-            <div class="title_text">
-              <h2>오늘 뭐 먹지?</h2>
-            </div>
+            <!-- <div class="title_text"> -->
+            <!-- <h2>오늘 뭐 먹지?</h2> -->
+            <!-- </div> -->
             <div class="menu_print">
               <h2></h2>
+              <p class="retry" style="display: none">
+                다시 클릭하면 시작<img
+                  class="click-logo"
+                  src="/static/image/click.png"
+                />
+              </p>
             </div>
             <div class="menu_slot">
               <div class="slot_container">

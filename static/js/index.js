@@ -78,7 +78,9 @@ modal.addEventListener("click", (e) => {
 // 카드 숨기기
 
 function changeStyle() {
+  let retry = document.querySelector(".retry");
   var element = document.getElementById("myDiv");
+
   if (element.style.display === "none") {
     element.style.display = "block";
   } else {
@@ -90,6 +92,7 @@ function changeStyle() {
     random.style.display = "none";
   } else {
     random.style.display = "flex";
+    retry.style.display = "block";
   }
 }
 
