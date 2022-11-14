@@ -98,5 +98,5 @@ app.get("/map", function (request, response) {
 });
 
 app.listen(PORT, function () {
-  console.log(`Listening on port ${PORT}!`);
+  console.log(`http://localhost:${PORT}`);
 });

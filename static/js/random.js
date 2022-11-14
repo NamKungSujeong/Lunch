@@ -90,8 +90,12 @@ function reset() {
 
   inputValue.value = "";
 }
+let retry = document.querySelector(".retry");
 
 let randomStop = document.querySelector(".menu_slot");
 let menuPrint = document.querySelector(".menu_print");
-randomStop.addEventListener("click", lunchIs);
+randomStop.addEventListener("click", function () {
+  lunchIs();
+  retry.style.display = "none";
+});
 menuPrint.addEventListener("click", reset);

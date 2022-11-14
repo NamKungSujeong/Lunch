@@ -20,7 +20,7 @@ function userNameInput(e) {
   tot = price + Number(tot);
 
   const result = document.getElementById("result");
-  const newList = document.createElement("li");
+  let newList = document.createElement("li");
   const ul = document.querySelector(".lists");
 
   const minusBtn = document.createElement("button");
@@ -38,6 +38,13 @@ function userNameInput(e) {
     pay = tot / peopleInput.value;
     document.querySelector("#payment").innerHTML = pay + "원";
   });
+
+  // price값 유효성 검사
+  if (isNaN(price)) {
+    alert("가격에는 숫자만 입력해 주세요");
+    newList = " ";
+    tot = " ";
+  }
 
   minusBtn.style.color = "red";
   minusBtn.style.fontSize = "20px";
