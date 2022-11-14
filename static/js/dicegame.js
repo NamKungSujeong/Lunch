@@ -68,6 +68,10 @@ let loading = document.querySelector(".loading-container");
 
 // 던지기
 function run() {
+  let return_btn = document.querySelector("#return");
+  let add = document.querySelector("#add");
+  let remove = document.querySelector("#remove");
+
   const numArray = [1, 2, 3, 4, 5, 6]; // 주사위 숫자
   numArray.sort(() => 0.5 - Math.random()); // 주사위 섞기
 
@@ -84,6 +88,13 @@ function run() {
       min = numArray[i]; // 최소값 추가하기
     } else {
     }
+  }
+
+  // 버튼 숨기기
+  add.style.display = "none";
+  remove.style.display = "none";
+  if (return_btn.classList.contains("show") === false) {
+    return_btn.classList.add("show");
   }
 
   // 스크롤 자동 이동
