@@ -133,6 +133,7 @@ function run() {
   const imgCard = document.querySelectorAll(".card");
   const inputBorder = document.querySelectorAll("input");
   const txt1 = document.querySelector(".txt1");
+  const shuffleBtn = document.querySelector("#shuffle");
   const arr = [];
 
   document.querySelector(".add").style.display = "none"; //유저추가버튼 안보이게
@@ -180,6 +181,7 @@ function run() {
     //카드 덱에서 맨 윗장 slideUp
     const frontImg = imgCard[0];
     frontImg.classList.add("slideUp");
+    // frontImg.style.position = "fiexd";
 
     // 배열값(유저이름) 랜덤 추출
     const r = Math.floor(Math.random() * arr.length);
@@ -199,6 +201,9 @@ function run() {
     btnNN.style.display = "inline-block";
     btnTxtY.style.display = "inline-block";
     btnTxtN.style.display = "inline-block";
+
+    // click here 상태에서 셔플되지 않게 셔플 버튼 숨기기
+    shuffleBtn.style.display = "none";
   });
 
   //이 카드로 할게요(당첨자공개)
@@ -237,6 +242,7 @@ function run() {
       frontImg.classList.remove("slideUp");
       frontImg.classList.remove("slideDown");
       txt1.style.display = "inline-block";
+      shuffle();
     }
     //Animation Remove 지연
     setTimeout(delay, 500);
@@ -270,12 +276,47 @@ function shuffle() {
   }, 1000);
 }
 
-// 6.초기화버튼 (새로고침)
+//6. 한번만 실행되는 셔플(게임 진행 중 경고창 띄울 때 셔플 실행되지 않도록)
+
+function once(fn, context) {
+  let result;
+  return function () {
+    if (fn) {
+      result = fn.apply(context || this, arguments);
+      fn = null;
+    }
+    return result;
+  };
+}
+
+let shuffleOnce = once(() => {
+  document.querySelector("#card1").classList.add("shuffle1");
+  document.querySelector("#card2").classList.add("shuffle2");
+  document.querySelector("#card3").classList.add("shuffle3");
+  document.querySelector("#card4").classList.add("shuffle4");
+  document.querySelector("#card5").classList.add("shuffle5");
+  document.querySelector("#card6").classList.add("shuffle6");
+
+  setTimeout(function () {
+    document.querySelector("#card1").classList.remove("shuffle1");
+    document.querySelector("#card2").classList.remove("shuffle2");
+    document.querySelector("#card3").classList.remove("shuffle3");
+    document.querySelector("#card4").classList.remove("shuffle4");
+    document.querySelector("#card5").classList.remove("shuffle5");
+    document.querySelector("#card6").classList.remove("shuffle6");
+  }, 1000);
+});
+
+document.querySelector("#submitBtn").addEventListener("click", () => {
+  shuffleOnce();
+});
+
+// 7.초기화버튼 (새로고침)
 function reset() {
   location.replace(location.href);
 }
 
-//7. 네온효과(h1태그)
+//8. 네온효과(h1태그)
 const colors = gsap.to("h1", {
   paused: true,
   duration: 20,

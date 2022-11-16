@@ -14,6 +14,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <!-- jquery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -138,12 +144,11 @@
           <button class="remove" id="remove" type="button" onclick="remove();">
             유저 제거
           </button>
-          <!-- run 버튼 한번만 실행시키기 -->
           <button id="target_btn" class="run" type="button" onclick="run();">
             던지기
           </button>
-          <button id="return" type="button" class="noshow">
-            <a href="dicegame">다시 하기</a>
+          <button id="reset" type="button" class="noshow" onclick="reset()">
+            다시 하기
           </button>
         </div>
       </div>

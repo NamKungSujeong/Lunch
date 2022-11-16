@@ -68,7 +68,7 @@ let loading = document.querySelector(".loading-container");
 
 // 던지기
 function run() {
-  let return_btn = document.querySelector("#return");
+  let reset = document.querySelector("#reset");
   let add = document.querySelector("#add");
   let remove = document.querySelector("#remove");
 
@@ -93,8 +93,8 @@ function run() {
   // 버튼 숨기기
   add.style.display = "none";
   remove.style.display = "none";
-  if (return_btn.classList.contains("show") === false) {
-    return_btn.classList.add("show");
+  if (reset.classList.contains("show") === false) {
+    reset.classList.add("show");
   }
 
   // 스크롤 자동 이동
@@ -146,31 +146,49 @@ function run() {
       console.log(p.length);
       if (particles.length > 0) {
         loading.classList.remove("ds-flex");
-        console.log(p);
+        // console.log(p);
       }
 
       if (p.y > window.innerHeight * 2) {
-        p.remove();
+        // p.remove();
+
         loading.classList.remove("ds-flex");
         loading.classList.add("ds-none");
         particles.splice(i, 1);
       }
     }
+
     requestAnimationFrame(render);
   }
 
   // 로딩창 구현
   if (loading.classList.contains("ds-flex") == false) {
+    const btn = document.querySelector(".run");
     loading.classList.add("ds-flex");
     loading.classList.remove("ds-none");
     pop();
     window.setTimeout(render, "2000");
+    // setTimeout((btn.disabled = "true"), "2000");
+
+    // 로딩창 활성활 될 때까지 던지기 버튼 비활성화
+    $(".run").attr("disabled", true);
+    setTimeout(function () {
+      $(".run").removeAttr("disabled");
+    }, 5000);
   }
+
+  // console.log(btn);
   // LOSER text 노출
 
   document.querySelector(
     ".result"
   ).innerHTML = `🥳 USER ${loser} 님 축하합니다! 밥사주세요!!!🥳`;
+
+  // history.go(0);
+}
+
+function reset() {
+  window.location.reload();
 }
 
 // 메뉴바
